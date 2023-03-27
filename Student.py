@@ -28,6 +28,12 @@ class Student:
         for a_course in self.course:
             self.courseList.append(a_course)
 
+    def removeCourse(self, *course):
+        self.course = course
+        for a_course in self.course:
+            if a_course in self.courseList:
+                self.courseList.remove(a_course)
+
     #Creates a display course method
     def displayCourse(self):
         for course in self.courseList:
@@ -44,6 +50,9 @@ def main():
     print(f"Student ID: {student.getStudentID()}")
 
     student.addCourse("MATH223", "DCIT201", "DCIT205", "CBAS210", "DCIT203", "DCIT207")
+    #student.displayCourse()
+
+    student.removeCourse("CBAS210", "DCIT203", "DCIT207")
     student.displayCourse()
 
 if __name__ == "__main__":
