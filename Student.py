@@ -19,4 +19,5 @@ class Student:
     def getStudentID(self):
         return self._studentID
 
-        
+    def setStudentID(self, studentID):
+        self._studentID = studentID 
