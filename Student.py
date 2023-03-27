@@ -2,7 +2,7 @@ class Student:
     def __init__(self, name=None, studentID=None, courseList=None):
         self.name = name
         self.studentID = studentID
-        self.courseList = courseList
+        self.courseList = []
 
     #Creates an __str__ that makes it possible to pass an object created from this class to the print function
     def __str__(self):
@@ -21,3 +21,25 @@ class Student:
 
     def setStudentID(self, studentID):
         self._studentID = studentID 
+
+    #Creates a method that allows students to add courses
+    def add_course(self, *course):
+        self.course = course
+        for a_course in self.course:
+            self.courseList.append(a_course)
+
+
+def main():
+    student = Student()
+    print(student)
+
+    student.setName("Saba")
+    print(f"Name: {student.getName()}")
+
+    student.setStudentID("1123465")
+    print(f"Student ID: {student.getStudentID()}")
+
+
+
+if __name__ == "__main__":
+    main()
