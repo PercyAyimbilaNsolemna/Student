@@ -8,4 +8,8 @@ class Student:
     def __str__(self):
         return "This is a Student class"
 
+    #Creates a getter and setter for the name attribute
+    def getName(self):
+        return self._name
+
         
