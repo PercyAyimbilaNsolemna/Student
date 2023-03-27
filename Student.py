@@ -23,11 +23,15 @@ class Student:
         self._studentID = studentID 
 
     #Creates a method that allows students to add courses
-    def add_course(self, *course):
+    def addCourse(self, *course):
         self.course = course
         for a_course in self.course:
             self.courseList.append(a_course)
 
+    #Creates a display course method
+    def displayCourse(self):
+        for course in self.courseList:
+            print(course)
 
 def main():
     student = Student()
@@ -39,7 +43,8 @@ def main():
     student.setStudentID("1123465")
     print(f"Student ID: {student.getStudentID()}")
 
-
+    student.addCourse("MATH223", "DCIT201", "DCIT205", "CBAS210", "DCIT203", "DCIT207")
+    student.displayCourse()
 
 if __name__ == "__main__":
     main()
