@@ -13,4 +13,10 @@ class Student:
         return self._name
 
     def setName(self, name):
-        self._name = name  
+        self._name = name 
+
+    #Creates a getter and setter for the studentID attribute
+    def getStudentID(self):
+        return self._studentID
+
+        
